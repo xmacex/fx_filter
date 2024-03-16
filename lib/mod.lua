@@ -8,9 +8,9 @@ local FxFilter = fx:new{
 function FxFilter:add_params()
    params:add_separator("fx_filter", "fx filter")
    FxFilter:add_slot("fx_filter_slot", "slot")
-   FxFilter:add_taper("fx_filter_freq", "freq", "freq", 20, 20000, 20000, 2, "Hz")
-   FxFilter:add_taper("fx_filter_res", "res", "res", 0, 0.95, 0.1, 1)
-   FxFilter:add_taper("fx_filter_inputgain", "inputgain", "inputgain", 0.1, 3, 1, 1, "")
+   FxFilter:add_control("fx_filter_freq", "freq", "freq", controlspec.WIDEFREQ)
+   FxFilter:add_control("fx_filter_res", "res", "res", controlspec.UNIPOLAR)
+   FxFilter:add_taper("fx_filter_inputgain", "inputgain", "inputgain", 0, 5)
    FxFilter:add_option("fx_filter_type", "type", "type", {"lp", "hp"}, 1)
 end
 
