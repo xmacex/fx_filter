@@ -10,7 +10,7 @@ function FxFilter:add_params()
    FxFilter:add_slot("fx_filter_slot", "slot")
    FxFilter:add_control("fx_filter_freq", "freq", "freq", controlspec.WIDEFREQ)
    FxFilter:add_control("fx_filter_res", "res", "res", controlspec.UNIPOLAR)
-   FxFilter:add_taper("fx_filter_inputgain", "inputgain", "inputgain", 0, 5)
+   FxFilter:add_taper("fx_filter_inputgain", "inputgain", "inputgain", 0, 5, 1)
    FxFilter:add_option("fx_filter_type", "type", "type", {"lp", "hp"}, 1)
 end
 
